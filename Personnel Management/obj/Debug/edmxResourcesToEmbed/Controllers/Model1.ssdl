@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PersonnelModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="PersonnelModelStoreContainer">
+    <EntitySet Name="DePartment" EntityType="PersonnelModel.Store.DePartment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Duties" EntityType="PersonnelModel.Store.Duties" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserInfo" EntityType="PersonnelModel.Store.UserInfo" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="DePartment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DeMane" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Duties">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Dumane" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Sex" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IDCard" Type="nvarchar" Nullable="false" MaxLength="200" />
+    <Property Name="DutiesID" Type="int" />
+    <Property Name="DepartmentID" Type="int" />
+  </EntityType>
+</Schema>

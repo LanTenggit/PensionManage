@@ -1,0 +1,333 @@
+﻿@{
+    ViewBag.Title = "personnel";
+}
+
+<html>
+<head>
+    <title></title>
+    <link href="~/Content/UI/themes/default/easyui.css" rel="stylesheet" />
+    <link href="~/Content/UI/themes/icon.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.7.1.js"></script>
+    <script src="~/Content/UI/jquery.easyui.min.js"></script>
+    <script src="~/Content/UI/locale/easyui-lang-zh_CN.js"></script>
+</head>
+    <style type="text/css">
+        #btn input {
+        width:50px;
+        
+        
+        
+        }
+
+
+    </style>
+
+<script type="text/javascript">
+    $(function () {
+        $("#tab").datagrid({
+            url: "/Person/personnels",
+            singleSelect: false,
+            method: 'post',
+            fitColumns: true,
+            sortName: 'ID',
+            sortOrder: 'asc',
+            striped: true,
+            nowrap: true,
+            pageSize: 10,
+            pageList: [10, 20, 30],
+            pagination: true,
+            columns: [[
+                    { field: 'ck', checkbox: true },
+                    { field: 'ID', title: '编号', align: 'center', width:150, sortable: true },
+                    { field: 'UserName', title: '名字', align: 'center', width: 150, sortable: true },
+                    { field: 'Sex', title: '性别', align: 'center', width: 150, sortable: true },
+                    { field: 'IDCard', title: '身份证', align: 'center', width: 150, sortable: true },
+                    { field: 'DeMane', title: '部门', align: 'center', width: 150, sortable: true },
+                    { field: 'Dumane', title: '职位', align: 'center', width: 150, sortable: true }
+            ]],
+            toolbar: "#btn"
+
+        })
+
+        $("#add").click(function () {
+            $("#divadd").dialog('open');
+            $("#divadd").dialog('setTitle', '添加员工')
+
+        })
+
+        $("#edit").click(function () {
+            $("#divadd").dialog('open');
+            $("#divadd").dialog('setTitle', '修改信息')
+            $("#Hidden1").val($("#tab").datagrid('getSelected').ID)
+            $("#Name").val($("#tab").datagrid('getSelected').UserName)
+            $("#pwd").val($("#tab").datagrid('getSelected').Password)
+            $("#IDCard").val($("#tab").datagrid('getSelected').IDCard)
+            $('#Sex').combobox('setValue', $("#tab").datagrid('getSelected').Sex);
+            $('#Department').combobox('setValue', $("#tab").datagrid('getSelected').DeMane);
+            $('#Duties').combobox('setValue', $("#tab").datagrid('getSelected').Dumane);
+          
+
+
+        })
+
+        $('#Department').combobox({
+            url: "/Person/DepartmentType",
+            method: "post",
+            editable: false,
+            hasDownArrow: true,
+            valueField: 'ID',
+            textField: 'DeMane',
+
+        });
+        $('#Duties').combobox({
+            url: "/Person/DutiesType",
+            method: "post",
+            editable: false,
+            hasDownArrow: true,
+            valueField: 'ID',
+            textField: 'Dumane',
+
+        });
+
+        
+        $('#Sex').combobox({
+            url: "/Person/SexType",
+            method: "post",
+            editable: false,
+            hasDownArrow: true,
+            valueField: 'ID',
+            textField: 'sex',
+
+        });
+
+        $('#bumen').combobox({
+            url: "/Person/DepartmentType",
+            method: "post",
+            editable: false,
+            hasDownArrow: true,
+            valueField: 'ID',
+            textField: 'DeMane',
+
+        });
+        $('#zhiwu').combobox({
+            url: "/Person/DutiesType",
+            method: "post",
+            editable: false,
+            hasDownArrow: true,
+            valueField: 'ID',
+            textField: 'Dumane',
+
+        });
+
+
+        $('#txtSex').combobox({
+            url: "/Person/SexType",
+            method: "post",
+            editable: false,
+            hasDownArrow: true,
+            valueField: 'ID',
+            textField: 'sex',
+
+        });
+
+        //添加or修改
+        $("#btnok").click(function () {
+            alert($("#Department").combobox('getText')) ;
+            if ($("#Hidden1").val() != 0) {
+                $.ajax({
+                    url: '/Person/edit',
+                    type: 'post',
+                    dataType: 'html',
+                    data: {
+                        ID: $("#tab").datagrid('getSelected').ID,
+                        UserName: $("#Name").val(),
+                        Password: $("#pwd").val(),
+                        Sex: $("#Sex").combobox('getText'),
+                        IDCard: $("#IDCard").val(),
+                        DepartmentID: $("#Department").combobox('getText'),
+                        DutiesID: $("#Duties").combobox('getText')
+                    },
+                    success: function (res) {
+                        if (res.state == true) {
+                            alert(res.meg);
+                            $("#tab").datagrid('reload', { reload: 'reload' });
+                            $("#divadd").dialog('close');
+                        } else {
+                            alert(res.meg);
+                            $("#tab").datagrid('reload', { reload: 'reload' });
+                            $("#divadd").dialog('close');
+                        }
+
+                    }, error: function () { }
+
+
+                })
+
+
+            }
+            else { 
+
+            $.ajax({
+                url:"/Person/add",
+                data: {
+                    UserName: $("#Name").val(),
+                    Password: $("#pwd").val(),
+                    Sex: $("#Sex").combobox('getText'),
+                    IDCard: $("#IDCard").val(),
+                    DepartmentID: $("#Department").combobox('getValue'),
+                    DutiesID: $("#Duties").combobox('getValue')
+                },
+                dataType: 'html',
+                type: 'post',
+                success: function (res) {
+                    alert(res);
+                    $("#tab").datagrid('reload', { reload: 'reload' });
+                    $("#divadd").dialog('close');
+
+                }, error: function (res) {
+                    alert("失败！");
+                }
+                })
+      }
+        })
+        
+        //删除
+        $("#remove").click(function () {
+            var list = $("#tab").datagrid("getSelections")
+            //alert(list.ID)
+            if (list.length > 0) {
+
+                var listID = ""
+                for (var i = 0; i < list.length; i++) {
+                    listID += list[i].ID + ","
+                }
+                if (window.confirm('确定要删除该记录吗')) {
+                    $.ajax({
+                        url: "/Person/deleId",
+                        type: 'post',
+                        data: { ID: listID },
+                        dataType: "json",
+                        success: function (reg) {
+                            if (reg.start == "true") {
+                                alert(reg.meg)
+                                
+                                $('#tab').datagrid('reload', { reload: 'reload' });
+                               
+                            }
+                            if (reg.start == "false") {
+                                alert(reg.meg)
+                                $('#tab').datagrid('reload', { reload: 'reload' });
+                                   
+                               
+                            }
+                        }
+                    });
+                }
+            } else {
+                alert('请选择删除项！')
+            }
+
+
+
+        })
+
+
+        //查询
+        $("#btnsearch").click(function () {
+            $.ajax({
+                url: '/Person/search',
+                type: 'post',
+                dataType: 'json',
+                data: {
+                   UserName: $("#txtName").val(),
+                   Sex: $("#txtSex").combobox('getText'),
+                   Department: $("#bumen").combobox('getText'),
+                   Duties: $("#zhiwu").combobox('getText')
+                },
+                success: function (sel) {
+                    $('#tab').datagrid('loadData', sel);
+
+                }, error: function (er) {
+                    alert("失败！");
+                }
+
+            })
+
+
+
+        })
+
+
+    })
+
+
+
+</script>
+
+    <body>
+        <div>
+              <table id="tab"></table>
+
+
+        <div id="btn">
+            姓名：<input class="easyui-textbox" type="text"  id="txtName"  style="width:50px;"/>性别：<input type="text" id ="txtSex" style="width:50px;"/>
+             部门：<input  type="text"  id="bumen" style="width:50px;"/>职务：<input type="text" id ="zhiwu" style="width:50px;"/>
+            <a  href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search',plain:true" id="btnsearch" >查询</a>
+            <a  href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true"id="add">新增</a>
+            <a  href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true" id="edit">修改</a>
+            <a  href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" id="remove">删除</a>
+        </div>
+
+            <div id="divadd" class="easyui-dialog" style="width: 550px; height: 200px;" closed="true" buttons="#subbtn">
+            <form id="form1">
+                <table>
+                    <tr>
+                        <td>名字:</td>
+                        <td>
+                            <input id="Name" type="text" class="easyui-validatebox "  data-options="required:true"/></td>
+                    </tr>
+                     <tr>
+                        <td>密码:</td>
+                        <td>
+                            <input id="pwd" type="text" class="easyui-validatebox "  data-options="required:true,validType:length[6,10]"/></td>
+                    </tr>
+                    <tr>
+                        <td>性别:</td>
+                        <td>
+                            <input type="text" id="Sex" class="easyui-validatebox " data-options="required:true" /></td>
+                    </tr>
+                    <tr>
+                        <td>身份证:</td>
+                        <td>
+                            <input type="text" id="IDCard" class="easyui-validatebox " data-options="required:true,validType:length[18]" /></td>
+                    </tr>
+                    <tr>
+                        <td>部门:</td>
+                        <td>
+                            <input type="text" id="Department" class="easyui-validatebox " data-options="required:true" /></td>
+                    </tr>
+                      <tr>
+                        <td>职位:</td>
+                        <td>
+                            <input type="text" id="Duties" class="easyui-validatebox " data-options="required:true" /></td>
+                    </tr>
+                    <input id="Hidden1" type="hidden" />
+                </table>
+            </form>
+        </div>
+        <div id="subbtn">
+            <a href="javascript:void(0)" class="easyui-linkbutton" id="btnok" iconcls="icon-ok">确定</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconcls="icon-cancel" onclick="javascript:$('#divadd').dialog('close')">关闭</a>
+
+
+        </div>
+
+
+
+        </div>
+
+     
+
+    </body>
+
+</html>

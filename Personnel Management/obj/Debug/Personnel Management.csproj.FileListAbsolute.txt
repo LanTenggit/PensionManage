@@ -1,0 +1,77 @@
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\Personnel Management.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\Personnel Management.pdb
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\Newtonsoft.Json.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Net.Http.Formatting.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.Helpers.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.Http.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.Http.WebHost.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.Mvc.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.Razor.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.WebPages.Deployment.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.WebPages.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.WebPages.Razor.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\Newtonsoft.Json.xml
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Net.Http.Formatting.xml
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.Helpers.xml
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.Http.xml
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.Http.WebHost.xml
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.Mvc.xml
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.Razor.xml
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.WebPages.xml
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.WebPages.Deployment.xml
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\System.Web.WebPages.Razor.xml
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.Http.resources.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\obj\Debug\Personnel Management.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\obj\Debug\Personnel Management.pdb
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\EntityFramework.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\EntityFramework.xml
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\lc\Desktop\Personnel Management\Personnel Management\obj\Debug\Personnel Management.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\Personnel Management.dll.config
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\Personnel Management.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\Personnel Management.pdb
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\EntityFramework.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Net.Http.Formatting.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.Helpers.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.Http.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.Http.WebHost.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.Mvc.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.Razor.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.WebPages.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\EntityFramework.xml
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Net.Http.Formatting.xml
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.Helpers.xml
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.Http.xml
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.Http.WebHost.xml
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.Mvc.xml
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.Razor.xml
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.WebPages.xml
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.Http.resources.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\obj\Debug\Personnel Management.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\obj\Debug\Personnel Management.dll
+C:\Users\Administrator\Desktop\Personnel Management\Personnel Management\Personnel Management\obj\Debug\Personnel Management.pdb
